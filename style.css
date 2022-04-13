@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --Very_dark_desaturated_blue_main :hsl(222, 26%, 31%);
+    --Very_dark_desaturated_blue_toggle :hsl(223, 31%, 20%);
+    --Very_dark_desaturated_blue_screen :#182034;
+    --Desaturated_dark_blue: hsl(225, 21%, 49%);
+    --Desaturated_very_dark_blue: hsl(224, 28%, 35%);
+    --Red: #d03f2f;
+    --Dark_red: hsl(6, 70%, 34%);
+    --Light_grayish_orange: hsl(30, 25%, 89%);
+    --Grayish_orange : hsl(28, 16%, 65%);
+    --Very_dark_grayish_blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+}
+body{
+    font-family: 'Spartan';
+    background-color: var(--Very_dark_desaturated_blue_main);
+}
+.calc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:30%;
+    display: flex;
+    flex-direction: column;
+}
+.calc h1{
+    color:white;
+    margin-bottom: 10px;
+}
+.calc .input{
+    font-size: 40px;
+    padding:5%;
+    width: 100%;
+    outline: none;
+    border: 0;
+    background-color: var(--Very_dark_desaturated_blue_screen);
+    color: white;
+    text-align: right;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.calc .all{
+    background-color: var(--Very_dark_desaturated_blue_toggle);
+    padding:5%;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.calc button{
+    font-size: 25px;
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--Very_dark_grayish_blue);
+    background-color: var(--Light_grayish_orange);
+    border-radius: 5px;
+    box-shadow: 2px 3px 1px var(--Grayish_orange);
+    text-transform: uppercase;
+}
+.calc .row{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.calc .row:last-child button{
+    width: 45%;
+}
+.calc .del,.calc .reset{
+    color: white;
+    background-color: var(--Desaturated_dark_blue);
+    box-shadow:2px 3px 1px var(--Very_dark_grayish_blue)   ;
+}
+.calc .eq{
+    background-color: var(--Red);
+    color: white;
+    box-shadow:2px 3px 1px var(--Dark_red) ;
+}
+.calc button:active{
+    box-shadow: 0px 0px 0px ;
+    transition: all .3s;
+}
+@media screen and (max-width:845px) {
+    .calc{
+        width: 70%;
+    }
+    .calc .input{
+        width: 97%;
+    }
+    .calc .all{
+        width: 97%;
+    }
+}
+@media screen and (max-width:380px) {
+    .calc{
+        width: 85%;
+    }
+    
+}
